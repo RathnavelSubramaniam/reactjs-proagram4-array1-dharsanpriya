@@ -1,11 +1,37 @@
-// Array of student objects
-const 
-students = [
-     }
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Array Destructuring</title>
+</head>
+<body>
 
+  <h2>Student Details (Destructuring)</h2>
+  <div id="output"></div>
 
+  <script>
+    // Array of student objects
+    const students = [
+      { id: 1, name: "Dharsan", age: 20, dept: "CSE" },
+      { id: 2, name: "Priya", age: 21, dept: "IT" },
+      { id: 3, name: "Rathnavel", age: 22, dept: "ECE" }
+    ];
 
-// Process the array using destructuring
+    // Process the array using destructuring
+    let outputText = "";
 
+    students.forEach((student) => {
+      // Object Destructuring
+      const { id, name, age, dept } = student;
+      
+      outputText += `<p><strong>ID:</strong> ${id} | <strong>Name:</strong> ${name} | <strong>Age:</strong> ${age} | <strong>Dept:</strong> ${dept}</p>`;
+      
+      // Console log-lum paakkalam
+      console.log(`Student: ${name}, Department: ${dept}`);
+    });
 
+    document.getElementById("output").innerHTML = outputText;
+  </script>
+
+</body>
+</html>
